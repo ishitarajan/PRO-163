@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Paintball in Virtual Reality</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="./playerMovement.js"></script>
+  <script src="./shoot.js"></script>
+
+</head>
+
+<body>
+  <a-scene id="scene" background="color:#98AFC7">
+    <a-assets>
+      <a-asset-item id="shooter" src="./models/shooter/gun.gltf"></a-asset-item>
+    </a-assets>
+    
+
+    <a-entity id="camera" camera position="0 1.6 0" look-controls="pointerLockEnabled: false">
+    <a-entity id="weapon" gltf-model="#shooter" position="0 -4.4 3" rotation="0 180 0" scale="0.35 1 1" player-movement>
+      </a-entity>
+      <a-cursor></a-cursor>
+    </a-entity>
+
+    
+    <a-entity bullets></a-entity>
+
+    
+    <a-plane id="ground" position="0 0 0" rotation="-90 0 0" height="200" width="200" color="#C19A6B" static-body
+      visible="true">
+    </a-plane>
+
+    
+    <a-box id="wall1" position="-0.546 0.5 -4.638" color="#B5EAAA" depth="1" height="1.5" width="10" ></a-box>
+    <a-box id="wall2" position="-5.630 0.5 -9.236" color="#B5EAAA" depth="1" height="1.5" width="10"></a-box>
+    <a-box id="wall3" position="2.811 0.5 -16.026" color="#B5EAAA" depth="1" height="1.5" width="10"></a-box>
+    <a-box id="wall4" position="0 0.5 -22.928" color="#B5EAAA" depth="1" height="1.5" width="10"></a-box>
+    <a-box id="wall5" position="-4.448 0.5 -13.317" color="#B5EAAA" depth="1" height="1.5" width="10"></a-box>
+    <a-box id="wall6" position="-9.215 0.5 -17.593" color="#B5EAAA" depth="10" height="1.5" width="1"></a-box>
+    <a-box id="wall7" position="-10.608 0.5 -14.706" color="#B5EAAA" depth="10" height="1.5" width="1"></a-box>
+    <a-box id="wall8" position="-4.670 0.5 -18.093" color="#B5EAAA" depth="10" height="1.5" width="1"></a-box>
+    <a-box id="wall9" position="8.054 0.5 -11.558" color="#B5EAAA" depth="10" height="1.5" width="1"></a-box>
+    <a-box id="wall10" position="4.880 0.500 -8.872" color="#B5EAAA" depth="10" height="1.5" width="1"></a-box>
+    <a-box id="wall11" position="7.638 0.5 -21.373" color="#B5EAAA" depth="10" height="1.5" width="1"></a-box>
+    <a-box id="wall12" position="-0.82929 0.5 -30.18869" color="red" depth="1" height="1.5" width="10"></a-box>
+
+  </a-scene>
+
+</body>
+
+</html>
